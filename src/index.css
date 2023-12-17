@@ -1,0 +1,33 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Be Vietnam Pro', sans-serif;
+    background: var(--White-97, #F7F7F8);
+}
+
+.rote {
+    transform: rotate(320deg);
+    font-size: larger;
+}
+
+.noBreak {
+    white-space: nowrap;
+}
+
+.grig {
+    display: grid;
+    grid-template-columns: 1fr auto;
+}
+
+.gr {
+    justify-self: end;
+    background-color: blue;
+}
