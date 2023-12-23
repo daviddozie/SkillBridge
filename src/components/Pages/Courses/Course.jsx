@@ -195,38 +195,36 @@ export default function Course() {
 
     return (
         <>
-            <div>
-                <Header
-                    headerText="Free Courses 🌟 Sale Ends"
-                    headerLogo="/images/header_Logo.jpg"
-                    logo="header_logo"
-                    signUp="Sign Up"
+            <Header
+                headerText="Free Courses 🌟 Sale Ends"
+                headerLogo="/images/header_Logo.jpg"
+                logo="header_logo"
+                signUp="Sign Up"
+            />
+            <Subheader
+                focusText="Online Courses on Design and Development"
+                subText="Welcome to our online course page, where you can enhance your skills in design and development. Choose from our carefully curated selection of 10 courses designed to provide you with comprehensive knowledge and practical experience. Explore the courses below and find the perfect fit for your learning journey."
+            />
+            <div className="gap-[50px] grid grid-cols-1">
+                {cards.map(card => {
+                    return (
+                        <CourseCard
+                            key={card.courseTrack}
+                            card={card}
+                        />
+                    )
+                })}
+            </div>
+            <div className="mt-[100px]">
+                <Footer
+                    imgLogo="/images/header_Logo.jpg"
+                    logoAlt="logo"
+                    mail="hello@skillbridge.com"
+                    contact="+91 91813 23 2309"
+                    location="Somewhere in the World"
+                    title="Social Profiles"
+                    copyRight="© 2023 Skillbridge. All rights reserved."
                 />
-                <Subheader
-                    focusText="Online Courses on Design and Development"
-                    subText="Welcome to our online course page, where you can enhance your skills in design and development. Choose from our carefully curated selection of 10 courses designed to provide you with comprehensive knowledge and practical experience. Explore the courses below and find the perfect fit for your learning journey."
-                />
-                <div className="gap-[50px] grid grid-cols-1">
-                    {cards.map(card => {
-                        return (
-                            <CourseCard
-                                key={card.courseTrack}
-                                card={card}
-                            />
-                        )
-                    })}
-                </div>
-                <div className="mt-[100px]">
-                    <Footer
-                        imgLogo="/images/header_Logo.jpg"
-                        logoAlt="logo"
-                        mail="hello@skillbridge.com"
-                        contact="+91 91813 23 2309"
-                        location="Somewhere in the World"
-                        title="Social Profiles"
-                        copyRight="© 2023 Skillbridge. All rights reserved."
-                    />
-                </div>
             </div>
         </>
     )
