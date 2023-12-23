@@ -108,6 +108,10 @@ function CoursesCard({
         cardDescrption,
     } = courseCard
 
+    function handleClick(e) {
+        console.log(e);
+    }
+
     return (
         <div>
             <div className="bg-[#fff] border border-[#F1F1F3] rounded-[12px] p-[15px] md:p-[30px]">
@@ -132,6 +136,7 @@ function CoursesCard({
                     </div>
                     <div>
                         <Button
+                            handleEvent={() => handleClick(cardName)}
                             label="Get it Now"
                             type="button"
                             styles="border border-[#F1F1F3] rounded-[8px] bg-[#F7F7F8] w-[100%] py-[12px] font-[500] text-[15px]"

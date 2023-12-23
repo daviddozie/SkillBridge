@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 
@@ -14,22 +15,27 @@ function Header({
     const navs = [
         {
             navItem: "Home",
+            route: "/",
             id: 1
         },
         {
             navItem: "Courses",
+            route: "/courses",
             id: 2
         },
         {
             navItem: "About Us",
+            route: "/about us",
             id: 3
         },
         {
             navItem: "Pricing",
+            route: "/pricing",
             id: 4
         },
         {
             navItem: "Contact",
+            route: "/contact",
             id: 5
         },
     ];
@@ -42,16 +48,18 @@ function Header({
             </div>
             <div className="lg:w-[85%] w-[100%] mx-auto flex items-center justify-between mt-6">
                 <div className="flex items-center gap-10 lg:w-auto">
-                    <img src={headerLogo} alt={logo} className="cursor-pointer" />
-                    <div className='navLinks duration-[1s] lg:static absolute bg-[#F7F7F8] min-h-[40vh] lg:min-h-[0vh] top-[-100%] z-[100] left-0 w-full flex items-center px-5'>
+                    <Link to={navs[0].route}><img src={headerLogo} alt={logo} className="cursor-pointer" /></Link>
+                    <nav className='navLinks duration-[1s] lg:static absolute bg-[#F7F7F8] min-h-[40vh] lg:min-h-[0vh] top-[-100%] z-[100] left-0 w-full flex items-center px-5'>
                         <ul className="flex lg:items-center gap-8 flex-col lg:flex-row">
                             {navs.map(nav => {
                                 return (
-                                    <li key={nav.id} className="cursor-pointer font-[400] text-[16px]">{nav.navItem}</li>
+                                    <li key={nav.id} className="cursor-pointer font-[400] text-[16px]">
+                                        <Link to={nav.route}>{nav.navItem}</Link>
+                                    </li>
                                 )
                             })}
                         </ul>
-                    </div>
+                    </nav>
                 </div>
                 <div className="flex items-center gap-5 md:gap-8 justify-end">
                     <span className="cursor-pointer font-[400] text-[16px]">{signUp}</span>
@@ -82,13 +90,15 @@ function Bars({ navs }) {
                 className='text-[30px] cursor-pointer lg:hidden'
                 onClick={handleToggle}
             />
-            <div className={`navLinks duration-500 ease-in-out lg:static absolute bg-[#F7F7F8] min-h-[40vh] lg:min-h-[0vh] top-[28%] md:top-[16%]  z-[1000] left-0 w-full flex items-center px-5 shadow-lg transition-all ${isBarsClicked ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+            <nav className={`navLinks duration-500 ease-in-out lg:static absolute bg-[#F7F7F8] min-h-[40vh] lg:min-h-[0vh] top-[28%] md:top-[16%]  z-[1000] left-0 w-full flex items-center px-5 shadow-lg transition-all ${isBarsClicked ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <ul className="flex lg:items-center gap-8 flex-col lg:flex-row">
                     {navs.map(nav => (
-                        <li key={nav.id} className="cursor-pointer font-[400] text-[16px]">{nav.navItem}</li>
+                        <li key={nav.id} className="cursor-pointer font-[400] text-[16px]">
+                            <Link to={nav.navItem}>{nav.navItem}</Link>
+                        </li>
                     ))}
                 </ul>
-            </div>
+            </nav>
         </div>
     );
 }
