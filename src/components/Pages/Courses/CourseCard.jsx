@@ -55,9 +55,9 @@ function CourseCard({
                     <div className="grid grid-cols-1 lg:grid-cols-5 border border-[#F1F1F3] rounded-bl-[12px] rounded-br-[12px] px-[25px] py-[24px] border-t-0 gap-[25px]">
                         {semiCards.map(semiCard => {
                             return (
-                                <div className="border-b-[1px] lg:border-b-[0px] lg:border-r-[1px] pb-[20px] lg:pb-[0px] lg:px-1">
-                                    <h1 className="font-[800] text-[40px] text-[#262626]" key={semiCard.courseNums}>{semiCard.courseNums}</h1>
-                                    <p className="text-[15px] font-[500] text-[#333]" key={semiCard.courseNumTitles}>{semiCard.courseNumTitles}</p>
+                                <div className="border-b-[1px] lg:border-b-[0px] lg:border-r-[1px] pb-[20px] lg:pb-[0px] lg:px-1" key={semiCard.courseNums}>
+                                    <h1 className="font-[800] text-[40px] text-[#262626]">{semiCard.courseNums}</h1>
+                                    <p className="text-[15px] font-[500] text-[#333]" >{semiCard.courseNumTitles}</p>
                                 </div>
                             )
                         })}

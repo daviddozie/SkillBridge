@@ -1,6 +1,7 @@
 import Header from "../../Header/Header"
 import Subheader from "../../Subheader/Subheader"
 import AboutSec from "./AboutSec"
+import AboutRev from "./AboutRev"
 import Footer from "../../Footer/Footer"
 
 export default function About() {
@@ -75,12 +76,19 @@ export default function About() {
             {sections.map(section => {
                 return (
                     <AboutSec
+                        key={section.secTitle}
                         secTitle={section.secTitle}
                         secPara={section.secPara}
                         cards={section.cards}
                     />
                 )
             })}
+            <AboutRev
+                fTitle='Together'
+                Title=", let's shape the future of digital innovation"
+                parag="Join us on this exciting learning journey and unlock your potential in design and development."
+                shape="/images/About_Shape.png"
+            />
             <Footer
                 imgLogo="/images/header_Logo.jpg"
                 logoAlt="logo"

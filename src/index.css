@@ -31,3 +31,41 @@ body {
     justify-self: end;
     background-color: blue;
 }
+
+.grid-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    gap: 24px;
+}
+
+.last--Item {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+.item1 {
+    grid-column: span 2;
+    grid-row: span 1;
+}
+
+input {
+    outline: none !important;
+}
+
+textarea {
+    outline: none !important;
+}
+
+@media only screen and (max-width: 600px) {
+    .grid-wrapper {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 24px;
+    }
+
+    .grid--Item {
+        grid-column: span 2;
+        grid-row: span 1;
+    } 
+}
