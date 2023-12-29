@@ -65,7 +65,7 @@ function Hero({
                     <Button
                         label="Explore Courses"
                         type="button"
-                        styles="font-[600] text-[16px] py-[18px] px-[24px] rounded-[8px] bg-[#FF9500] text-white"
+                        styles="font-[600] text-[16px] py-[18px] px-[24px] rounded-[8px] bg-[#FF9500] text-white hover:bg-[#ff9500f3] transition ease-in-out duration-200"
                     />
                     <Button
                         label="View Pricing"

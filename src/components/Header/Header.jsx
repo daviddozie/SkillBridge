@@ -50,10 +50,10 @@ function Header({
                 <div className="flex items-center gap-10 lg:w-auto">
                     <Link to={navs[0].route}><img src={headerLogo} alt={logo} className="cursor-pointer" /></Link>
                     <nav className='navLinks duration-[1s] lg:static absolute bg-[#F7F7F8] min-h-[40vh] lg:min-h-[0vh] top-[-100%] z-[100] left-0 w-full flex items-center px-5'>
-                        <ul className="flex lg:items-center gap-8 flex-col lg:flex-row">
+                        <ul className="flex lg:items-center flex-col lg:flex-row">
                             {navs.map(nav => {
                                 return (
-                                    <li key={nav.id} className="cursor-pointer font-[400] text-[16px]">
+                                    <li key={nav.id} className="cursor-pointer font-[400] text-[16px] hover:bg-[#F1F1F3] px-[24px] rounded-[8px] py-[14px] transition ease-in-out duration-500">
                                         <Link to={nav.route}>{nav.navItem}</Link>
                                     </li>
                                 )
@@ -61,8 +61,8 @@ function Header({
                         </ul>
                     </nav>
                 </div>
-                <div className="flex items-center gap-5 md:gap-8 justify-end">
-                    <span className="cursor-pointer font-[400] text-[16px]">{signUp}</span>
+                <div className="flex items-center gap-3 md:gap-5 justify-end">
+                    <span className="cursor-pointer font-[400] text-[16px] hover:bg-[#F1F1F3] px-[24px] rounded-[8px] py-[14px] transition ease-in-out duration-500">{signUp}</span>
                     <Button
                         label="Login"
                         type="button"

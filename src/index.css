@@ -57,6 +57,10 @@ textarea {
     outline: none !important;
 }
 
+.line--mark {
+    border-right: 3px !important;
+}
+
 @media only screen and (max-width: 600px) {
     .grid-wrapper {
         display: grid;

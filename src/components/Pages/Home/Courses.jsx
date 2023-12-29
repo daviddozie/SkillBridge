@@ -77,7 +77,7 @@ function Courses() {
                 <Button
                     label="View All"
                     type="button"
-                    styles="border border-[#F1F1F3] bg-[#FCFCFD] rounded-[8px] py-[14px] px-[24px] font-[500] text-[16px] text-[262626] w-[130px] lg:ms-[200px] mt-6 lg:mt-0"
+                    styles="border border-[#F1F1F3] bg-[#FCFCFD] rounded-[8px] py-[14px] px-[24px] font-[500] text-[16px] text-[262626] w-[130px] lg:ms-[200px] mt-6 lg:mt-0  hover:bg-[#eaeaeb] transition ease-in-out duration-500"
                 />
             </div>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] my-[70px]">
@@ -139,7 +139,7 @@ function CoursesCard({
                             handleEvent={() => handleClick(cardName)}
                             label="Get it Now"
                             type="button"
-                            styles="border border-[#F1F1F3] rounded-[8px] bg-[#F7F7F8] w-[100%] py-[12px] font-[500] text-[15px]"
+                            styles="border border-[#F1F1F3] rounded-[8px] bg-[#F7F7F8] w-[100%] py-[12px] font-[500] text-[15px] hover:bg-[#eaeaeb] transition ease-in-out duration-500"
                         />
                     </div>
                 </div>

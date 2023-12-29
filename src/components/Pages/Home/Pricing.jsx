@@ -50,7 +50,7 @@ export default function Pricing() {
                     <Button
                         label="Monthly"
                         type="button"
-                        styles="bg-[#FF9500] py-[14px] px-[30px] rounded-[6px] font-[500] text-[15px] text-[#fff]"
+                        styles="bg-[#FF9500] py-[14px] px-[30px] rounded-[6px] font-[500] text-[15px] text-[#fff] hover:bg-[#ff9500f3] transition ease-in-out duration-200"
                     />
                     <Button
                         label="Yearly"

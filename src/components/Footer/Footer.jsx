@@ -65,9 +65,9 @@ function Footer({
                     <div>
                         <span className='font-[600] text-[17px] text-[#262626]'>{title}</span>
                         <div className='flex gap-3 pt-4'>
-                            <FontAwesomeIcon icon={faFacebook} className='bg-[#F7F7F8] border border-[#F1F1F3] rounded-[8px] p-[12px] text-[#333333] cursor-pointer text-[20px]' />
-                            <FontAwesomeIcon icon={faTwitter} className='bg-[#F7F7F8] border border-[#F1F1F3] rounded-[8px] p-[12px] text-[#333333] cursor-pointer text-[20px]' />
-                            <FontAwesomeIcon icon={faLinkedin} className='bg-[#F7F7F8] border border-[#F1F1F3] rounded-[8px] p-[12px] text-[#333333] cursor-pointer text-[20px]' />
+                            <FontAwesomeIcon icon={faFacebook} className='bg-[#F7F7F8] border border-[#F1F1F3] rounded-[8px] p-[12px] text-[#333333] cursor-pointer text-[20px] transition ease-in-out duration-500 hover:bg-[#eaeaeb]' />
+                            <FontAwesomeIcon icon={faTwitter} className='bg-[#F7F7F8] border border-[#F1F1F3] rounded-[8px] p-[12px] text-[#333333] cursor-pointer text-[20px] transition ease-in-out duration-500 hover:bg-[#eaeaeb]' />
+                            <FontAwesomeIcon icon={faLinkedin} className='bg-[#F7F7F8] border border-[#F1F1F3] rounded-[8px] p-[12px] text-[#333333] cursor-pointer text-[20px] transition ease-in-out duration-500 hover:bg-[#eaeaeb]' />
                         </div>
                     </div>
                 </div>
@@ -97,7 +97,7 @@ function Navigation({
             <ul className='pt-4'>
                 {navLists.map(navList => {
                     return (
-                        <li key={navList} className='font-[500] text-[14px] text-[#59595A] mb-2 cursor-pointer'>{navList}</li>
+                        <li key={navList} className='font-[500] text-[14px] text-[#59595A] mb-3 cursor-pointer transition ease-in-out duration-500 hover:translate-x-4'>{navList}</li>
                     )
                 })}
             </ul>

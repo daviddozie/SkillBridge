@@ -52,7 +52,7 @@ function PricingCard({
                         handleEvent={check}
                         label="Get Started"
                         type='button'
-                        styles="bg-[#FF9500] py-[20px] rounded-bl-[8px] rounded-br-[8px] w-[100%] text-white text-[15px] font-[600]"
+                        styles="bg-[#FF9500] py-[20px] rounded-bl-[8px] rounded-br-[8px] w-[100%] text-white text-[15px] font-[600] hover:bg-[#ff9500f3] transition ease-in-out duration-200"
                     />
                 </div>
             </div>

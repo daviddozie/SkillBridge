@@ -193,6 +193,7 @@ export default function Course() {
         },
     ]
 
+
     return (
         <>
             <Header
@@ -205,7 +206,7 @@ export default function Course() {
                 focusText="Online Courses on Design and Development"
                 subText="Welcome to our online course page, where you can enhance your skills in design and development. Choose from our carefully curated selection of 10 courses designed to provide you with comprehensive knowledge and practical experience. Explore the courses below and find the perfect fit for your learning journey."
             />
-            <div className="gap-[50px] grid grid-cols-1">
+            <div className={`gap-[50px] grid grid-cols-1`}>
                 {cards.map(card => {
                     return (
                         <CourseCard
