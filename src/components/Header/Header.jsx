@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowRight, faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import PropTypes from 'prop-types';
 import Button from '../Button/Button';
 
@@ -11,6 +11,9 @@ function Header({
     logo,
     signUp,
 }) {
+
+    const activeLink = "bg-[#F1F1F3] px-[24px] rounded-[8px] py-[14px] transition ease-in-out duration-500";
+    const normalLink = "";
 
     const navs = [
         {
@@ -48,13 +51,15 @@ function Header({
             </div>
             <div className="lg:w-[85%] w-[100%] mx-auto flex items-center justify-between mt-6">
                 <div className="flex items-center gap-10 lg:w-auto">
-                    <Link to={navs[0].route}><img src={headerLogo} alt={logo} className="cursor-pointer" /></Link>
+                    <NavLink to={navs[0].route}><img src={headerLogo} alt={logo} className="cursor-pointer" /></NavLink>
                     <nav className='navLinks duration-[1s] lg:static absolute bg-[#F7F7F8] min-h-[40vh] lg:min-h-[0vh] top-[-100%] z-[100] left-0 w-full flex items-center px-5'>
                         <ul className="flex lg:items-center flex-col lg:flex-row">
                             {navs.map(nav => {
                                 return (
                                     <li key={nav.id} className="cursor-pointer font-[400] text-[16px] hover:bg-[#F1F1F3] px-[24px] rounded-[8px] py-[14px] transition ease-in-out duration-500">
-                                        <Link to={nav.route}>{nav.navItem}</Link>
+                                        <NavLink to={nav.route} 
+                                            className={({ isActive }) => (isActive ? activeLink: normalLink)}
+                                        >{nav.navItem}</NavLink>
                                     </li>
                                 )
                             })}
@@ -62,12 +67,18 @@ function Header({
                     </nav>
                 </div>
                 <div className="flex items-center gap-3 md:gap-5 justify-end">
-                    <span className="cursor-pointer font-[400] text-[16px] hover:bg-[#F1F1F3] px-[24px] rounded-[8px] py-[14px] transition ease-in-out duration-500">{signUp}</span>
-                    <Button
-                        label="Login"
-                        type="button"
-                        styles="bg-[#FF9500] py-[14px] px-[24px] md:px-[34px] rounded-[8px] text-white font-[400] text-[16px]"
-                    />
+                    <span className="cursor-pointer font-[400] text-[16px] hover:bg-[#F1F1F3] px-[24px] rounded-[8px] py-[14px] transition ease-in-out duration-500">
+                        <NavLink to='/Sign Up'
+                            className={({ isActive }) => (isActive ? activeLink: normalLink)}
+                        >{signUp}</NavLink>
+                    </span>
+                    <NavLink to='/Log In'>
+                        <Button
+                            label="Login"
+                            type="button"
+                            styles="bg-[#FF9500] py-[14px] px-[24px] md:px-[34px] rounded-[8px] text-white font-[400] text-[16px]"
+                        />
+                    </NavLink>
                     <Bars navs={navs} />
                 </div>
             </div>
@@ -94,7 +105,7 @@ function Bars({ navs }) {
                 <ul className="flex lg:items-center gap-8 flex-col lg:flex-row">
                     {navs.map(nav => (
                         <li key={nav.id} className="cursor-pointer font-[400] text-[16px]">
-                            <Link to={nav.navItem}>{nav.navItem}</Link>
+                            <NavLink to={nav.navItem}>{nav.navItem}</NavLink>
                         </li>
                     ))}
                 </ul>
@@ -111,7 +122,7 @@ Header.propTypes = {
 }
 
 Bars.propTypes = {
-    navs:PropTypes.arrayOf(PropTypes.object.isRequired),
+    navs: PropTypes.arrayOf(PropTypes.object.isRequired),
 }
 
 export default Header; 

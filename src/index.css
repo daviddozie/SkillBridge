@@ -61,6 +61,214 @@ textarea {
     border-right: 3px !important;
 }
 
+.swiper {
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.swiper-button-prev, .swiper-button-next {
+    margin-top: 140px;
+    opacity: 0;
+}
+
+.swiper-button-prev {
+    margin-left: 350px;
+}
+
+.arrowrightNav, .arrowleftNav {
+    position: absolute;
+    cursor: pointer;
+}
+
+
+.arrowleftNav {
+    background-color: #fff;
+    padding: 14px 18px;
+    border-radius: 8px;
+    right: 104px;
+    bottom: 6px;
+    border: 1px solid #F1F1F3;
+}
+
+.arrowrightNav {
+    background-color: #fff;
+    padding: 14px 18px;
+    border-radius: 8px;
+    right: 0;
+    bottom: 6px;
+    border: 1px solid #F1F1F3;
+}
+
+.checkbox {
+    accent-color: #ff9500;
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 1280px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 138px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 320px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+}
+
+@media only screen and (max-width: 1024px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 152px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 220px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+}
+
+@media only screen and (max-width: 912px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 87px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 660px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+}
+
+@media only screen and (max-width: 820px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 100px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 565px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 100px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 536px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+}
+
 @media only screen and (max-width: 600px) {
     .grid-wrapper {
         display: grid;
@@ -72,4 +280,203 @@ textarea {
         grid-column: span 2;
         grid-row: span 1;
     } 
+}
+
+@media only screen and (max-width: 540px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 110px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 360px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+}
+
+@media only screen and (max-width: 430px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 123px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 255px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+}
+
+@media only screen and (max-width: 414px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 123px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 235px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+}
+
+
+@media only screen and (max-width: 390px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 123px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 215px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 123px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 185px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+}
+
+@media only screen and (max-width: 360px) {
+    .swiper {
+        padding-bottom: 100px;
+        position: relative;
+    }
+    
+    .swiper-button-prev, .swiper-button-next {
+        margin-top: 123px;
+    }
+    
+    .swiper-button-prev {
+        margin-left: 185px;
+    }
+    
+    .arrowleftNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 104px;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
+    
+    .arrowrightNav {
+        background-color: #fff;
+        padding: 14px 18px;
+        border-radius: 8px;
+        right: 0;
+        bottom: 6px;
+        border: 1px solid #F1F1F3;
+    }
 }
