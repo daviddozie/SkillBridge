@@ -30,10 +30,10 @@ function CourseCard({
                             styles="border border-[#F1F1F3] bg-[#FCFCFD] rounded-[8px] py-[14px] px-[14px] font-[500] text-[16px] text-[262626] w-[140px] lg:ms-[200px] mt-0 mb-[30px] lg:mt-0"
                         />
                     </div>
-                    <div className="grid grid-cols-3 gap-[10px] md:gap-[30px]">
+                    <div className="grid grid-cols-3 gap-[10px] md:gap-[30px] relative overflow-hidden rounded-[6px]">
                         {courseImages.map(courseImage => {
                             return (
-                                <img key={courseImage} src={courseImage} className="rounded-[6px]" />
+                                <img key={courseImage} src={courseImage} className="rounded-[6px] imgScale" />
                             )
                         })}
                     </div>

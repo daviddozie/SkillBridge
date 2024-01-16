@@ -109,16 +109,12 @@ function CoursesCard({
         cardDescrption,
     } = courseCard
 
-    function handleClick(e) {
-        console.log(e);
-    }
-
     return (
         <div>
-            <div className="bg-[#fff] border border-[#F1F1F3] rounded-[12px] p-[15px] md:p-[30px]">
+            <div className="bg-[#fff] border border-[#F1F1F3] rounded-[12px] p-[15px] md:p-[30px] course-card">
                 <div>
-                    <div>
-                        <img src={image} alt={imageAlt} />
+                    <div className="relative overflow-hidden rounded-[6px]">
+                        <img src={image} alt={imageAlt} className="imgScale"/>
                     </div>
                     <div className="flex flex-col md:flex-row md:justify-between py-[30px]">
                         <div className="flex items-center gap-3">

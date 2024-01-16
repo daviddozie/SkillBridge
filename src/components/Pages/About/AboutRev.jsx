@@ -1,5 +1,6 @@
 import Button from "../../Button/Button";
 import PropTypes from 'prop-types'
+import { NavLink } from "react-router-dom";
 
 function AboutRev({
     shape,
@@ -16,14 +17,16 @@ function AboutRev({
                         <p className="font-[400] text-[15px] text-[#4C4C4D]">{parag}</p>
                     </div>
                     <div>
-                        <Button 
-                            type="button"
-                            label="Join Now"
-                            styles="bg-[#FF9500] py-[18px] px-[24px] rounded-[8px] text-[16px] font-[600] text-white w-[120px]"
-                        />
+                        <NavLink to="/contact">
+                            <Button
+                                type="button"
+                                label="Join Now"
+                                styles="bg-[#FF9500] py-[18px] px-[24px] rounded-[8px] text-[16px] font-[600] text-white w-[120px]"
+                            />
+                        </NavLink>
                     </div>
                 </div>
-                <img src={shape} className="w-[25%] absolute top-0 right-[200px] z-[1] hidden lg:block"/>
+                <img src={shape} className="w-[25%] absolute top-0 right-[200px] z-[1] hidden lg:block" />
             </div>
         </div>
     )

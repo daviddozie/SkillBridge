@@ -67,7 +67,7 @@ function Header({
                     </nav>
                 </div>
                 <div className="flex items-center gap-3 md:gap-5 justify-end">
-                    <span className="cursor-pointer font-[400] text-[16px] hover:bg-[#F1F1F3] px-[24px] rounded-[8px] py-[14px] transition ease-in-out duration-500">
+                    <span className="cursor-pointer font-[400] text-[16px] hover:bg-[#F1F1F3] px-[12px] rounded-[8px] py-[14px] transition ease-in-out duration-500">
                         <NavLink to='/Sign Up'
                             className={({ isActive }) => (isActive ? activeLink: normalLink)}
                         >{signUp}</NavLink>
@@ -105,7 +105,7 @@ function Bars({ navs }) {
                 <ul className="flex lg:items-center gap-8 flex-col lg:flex-row">
                     {navs.map(nav => (
                         <li key={nav.id} className="cursor-pointer font-[400] text-[16px]">
-                            <NavLink to={nav.navItem}>{nav.navItem}</NavLink>
+                            <NavLink to={nav.route}>{nav.navItem}</NavLink>
                         </li>
                     ))}
                 </ul>

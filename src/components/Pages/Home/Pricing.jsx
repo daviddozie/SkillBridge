@@ -1,15 +1,52 @@
 import Title from "./SectionTitle";
 import Button from "../../Button/Button";
 import PricingCard from "../../PricingCard/PricingCard";
+import { useState } from "react";
 
 export default function Pricing() {
+
+    const bgColor = "bg-[#FF9500] py-[14px] px-[30px] rounded-[6px] font-[500] text-[15px] text-[#fff] transition ease-in-out duration-500";
+    const empColor = "py-[14px] px-[30px] rounded-[6px] font-[500] text-[15px] text-[#4C4C4D] transition ease-in-out duration-500";
+
+    const [Bg, setBg] = useState(bgColor);
+    const [Bg2, setBg2] = useState(empColor);
+    const [proPlan, setProPlan] = useState(79);
+    const [yearPlan, setYearPlan] = useState("month")
+
+    const isClicked = () => {
+        if(bgColor) {
+            setBg(bgColor);
+            setBg2(empColor);
+            setProPlan(79);
+            setYearPlan("month")
+        } else {
+            setBg(empColor);
+            setProPlan(900);
+            setYearPlan("year")
+        }
+    }
+
+    const isClicked2 = () => {
+       if(empColor) {
+            setBg2(bgColor);
+            setBg(empColor);
+            setProPlan(900);
+            setYearPlan("year")
+       } 
+       else {
+            setBg2(empColor);
+            setProPlan(79);
+            setYearPlan("month")
+       }
+    }
+
 
     const priceCards = [
         {
             id: 1,
             label: "Free Plan",
             num: "$0",
-            date: "/month",
+            date: `/${yearPlan}`,
             status: "Avaliable Features",
             benefits: [
                 "Access to selected free courses.",
@@ -24,8 +61,8 @@ export default function Pricing() {
         {
             id: 2,
             label: "Pro Plan",
-            num: "$79",
-            date: "/month",
+            num: `$${proPlan}`,
+            date: `/${yearPlan}`,
             status: "Avaliable Features",
             benefits: [
                 "Unlimited access to all courses.",
@@ -48,14 +85,16 @@ export default function Pricing() {
                 />
                 <div className="bg-[#FFF] p-[12px] rounded-[8px] flex items-center justify-center w-[260px] h-[80px] mx-auto mt-9 lg:mt-0">
                     <Button
+                        handleEvent={isClicked}
                         label="Monthly"
                         type="button"
-                        styles="bg-[#FF9500] py-[14px] px-[30px] rounded-[6px] font-[500] text-[15px] text-[#fff] hover:bg-[#ff9500f3] transition ease-in-out duration-200"
+                        styles={`${Bg}`}
                     />
                     <Button
+                        handleEvent={isClicked2}
                         label="Yearly"
                         type="button"
-                        styles="py-[14px] px-[30px] rounded-[6px] font-[500] text-[15px] text-[#4C4C4D]"
+                        styles={`${Bg2}`}
                     />
                 </div>
             </div>

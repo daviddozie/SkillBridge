@@ -69,7 +69,7 @@ function TestmonialCard({
     const {testimony, profile, profileAlt, profileName,} = textCard
 
     return (
-        <div className="bg-[#FFF] rounded-[8px]">
+        <div className="bg-[#FFF] rounded-[8px] benefit-card">
             <div className="p-[15px] lg:p-[30px]">
                 <span className="text-[15px] text-[#4C4C4D] font-[400]">{testimony}</span>
             </div>

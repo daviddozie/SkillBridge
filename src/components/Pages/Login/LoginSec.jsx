@@ -67,7 +67,7 @@ function LoginSec({
                 />
                 <div className="flex items-center justify-center gap-1 pt-6 text-[#262626]">
                     <span>{bridge}</span>
-                    <Link to="/Log In" className="underline">{log}</Link>
+                    <Link to="/Sign Up" className="underline">{log}</Link>
                     <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
                         <path d="M6.50005 19.5L19.5 6.49996M19.5 6.49996V18.98M19.5 6.49996H7.02005" stroke="#262626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
