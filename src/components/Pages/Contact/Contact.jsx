@@ -1,6 +1,5 @@
 import Header from "../../Header/Header"
 import Subheader from "../../Subheader/Subheader"
-import Button from "../../Button/Button"
 import Form from "./Form"
 import Footer from "../../Footer/Footer"
 
