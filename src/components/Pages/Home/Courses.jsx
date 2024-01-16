@@ -1,6 +1,7 @@
 import Title from "./SectionTitle";
 import Button from "../../Button/Button";
 import PropTypes from 'prop-types'
+import { NavLink } from "react-router-dom";
 
 function Courses() {
 
@@ -135,12 +136,13 @@ function CoursesCard({
                         <span className="font-[400] text-[14px] text-[#4C4C4D]">{cardDescrption}</span>
                     </div>
                     <div>
-                        <Button
-                            handleEvent={() => handleClick(cardName)}
-                            label="Get it Now"
-                            type="button"
-                            styles="border border-[#F1F1F3] rounded-[8px] bg-[#F7F7F8] w-[100%] py-[12px] font-[500] text-[15px] hover:bg-[#eaeaeb] transition ease-in-out duration-500"
-                        />
+                        <NavLink to="./courses">
+                            <Button
+                                label="Get it Now"
+                                type="button"
+                                styles="border border-[#F1F1F3] rounded-[8px] bg-[#F7F7F8] w-[100%] py-[12px] font-[500] text-[15px] hover:bg-[#eaeaeb] transition ease-in-out duration-500"
+                            />
+                        </NavLink>
                     </div>
                 </div>
             </div>

@@ -5,6 +5,7 @@ import Courses from "./Courses"
 import Testmonial from "./Testmonial"
 import Pricing from "./Pricing"
 import Footer from "../../Footer/Footer"
+import FAQ from "../../FAQ/FAQ"
 
 export default function Home() {
 
@@ -17,7 +18,7 @@ export default function Home() {
                     logo="header_logo"
                     signUp="Sign Up"
                 />
-                <Hero 
+                <Hero
                     spark="/images/spark.png"
                     sparkAlt="spark"
                     flashIcon="/images/flash_Icon.png"
@@ -33,7 +34,15 @@ export default function Home() {
                 <Courses />
                 <Testmonial />
                 <Pricing />
-                <Footer 
+                <FAQ
+                    title='Frequently'
+                    brTitle="Asked Questions"
+                    subTitle='Still you have any questions? Contact our Team via support@skillbridge.com'
+                    step="See All FAQ’s"
+                    qest="Can I enroll in multiple courses at once?"
+                    ans="Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience."
+                />
+                <Footer
                     imgLogo="/images/header_Logo.jpg"
                     logoAlt="logo"
                     mail="hello@skillbridge.com"

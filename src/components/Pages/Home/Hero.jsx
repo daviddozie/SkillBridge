@@ -1,5 +1,6 @@
 import Button from "../../Button/Button"
 import PropTypes from 'prop-types'
+import { NavLink } from "react-router-dom"
 
 function Hero({
     spark,
@@ -62,21 +63,25 @@ function Hero({
                     <p className="text-[16px] font-[400] text-[#262626] text-center">{heroText}</p>
                 </div>
                 <div className="flex justify-center items-center gap-2 mt-[50px]">
-                    <Button
-                        label="Explore Courses"
-                        type="button"
-                        styles="font-[600] text-[16px] py-[18px] px-[24px] rounded-[8px] bg-[#FF9500] text-white hover:bg-[#ff9500f3] transition ease-in-out duration-200"
-                    />
-                    <Button
-                        label="View Pricing"
-                        type="button"
-                        styles="font-[600] text-[16px] py-[18px] px-[24px] rounded-[8px] bg-[#fff] border border-[#F1F1F3]"
-                    />
+                    <NavLink to="./courses">
+                        <Button
+                            label="Explore Courses"
+                            type="button"
+                            styles="font-[600] text-[16px] py-[18px] px-[24px] rounded-[8px] bg-[#FF9500] text-white hover:bg-[#ff9500f3] transition ease-in-out duration-200"
+                        />
+                    </NavLink>
+                    <NavLink to="./pricing">
+                        <Button
+                            label="View Pricing"
+                            type="button"
+                            styles="font-[600] text-[16px] py-[18px] px-[24px] rounded-[8px] bg-[#fff] border border-[#F1F1F3]"
+                        />
+                    </NavLink>
                 </div>
                 <div className="border border-[#F1F1F3] bg-[#FCFCFD] rounded-[12px] flex justify-center gap-[60px] items-center px-[30px] py-[50px] my-[90px] flex-wrap">
                     {brands.map(brand => {
                         return (
-                            <img src={brand.image} alt={brand.imageAlt} key={brand.imageAlt}/>
+                            <img src={brand.image} alt={brand.imageAlt} key={brand.imageAlt} />
                         )
                     })}
                 </div>
