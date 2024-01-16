@@ -44,7 +44,7 @@ export default function Form() {
 
     return (
         <>
-            <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto mb-[80px]">
+            <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto mb-[80px]" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
                 <div className="bg-white rounded-[8px] p-[20px] md:p-[50px]">
                     <div className="grid-wrapper">
                         {Inputs.map(input => {

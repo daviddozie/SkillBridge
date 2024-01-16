@@ -13,7 +13,7 @@ function AboutSec({
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-[30px] pt-[70px] pb-[70px]">
                     {cards.map(card => {
                         return (
-                            <div className="bg-white rounded-[12px] md:p-[40px] p-[20px] benefit-card" key={card.cardTitle}>
+                            <div className="bg-white rounded-[12px] md:p-[40px] p-[20px] benefit-card" key={card.cardTitle} data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
                                 <div>
                                     <div className="mb-5 flex justify-center items-center w-[60px] bg-[#FFF9F0] h-[60px] border border-[#FFEACC] rounded-[8px]">
                                         <img src={card.Icon} />

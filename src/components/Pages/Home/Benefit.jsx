@@ -78,7 +78,7 @@ function BenefitCard({
 
     return (
         <div>
-            <div className="bg-white rounded-[12px] py-[30px] px-[25px] benefit-card">
+            <div className="bg-white rounded-[12px] py-[30px] px-[25px] benefit-card" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-duration="1000" data-aos-once="true">
                 <div className="flex justify-end">
                     <span className="font-[700] text-[60px] my-0">{num}</span>
                 </div>

@@ -17,7 +17,7 @@ function CourseCard({
 
     return (
         <div className={`w-[95%] md:w-[90%] lg:w-[80%] mx-auto`}>
-            <div className="bg-white rounded-[12px] p-[20px] md:p-[40px]">
+            <div className="bg-white rounded-[12px] p-[20px] md:p-[40px]" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
                 <div>
                     <div className="flex flex-col lg:flex-row lg:items-center">
                         <div>

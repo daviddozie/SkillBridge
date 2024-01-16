@@ -19,7 +19,7 @@ function PricingCard({
 
     return (
         <div>
-            <div className="border border-[#F1F1F3] bg-[#FCFCFD] rounded-[12px] py-[20px] px-[10px] md:py-[40px] md:px-[25px]">
+            <div className="border border-[#F1F1F3] bg-[#FCFCFD] rounded-[12px] py-[20px] px-[10px] md:py-[40px] md:px-[25px]" data-aos="zoom-in" data-aos-easing="ease-in-out" data-aos-once="true" data-aos-duration="1000">
                 <div className="border border-[#FFEACC] rounded-[6px] bg-[#FFF9F0]  py-[12px] px-[22px] flex justify-center">
                     <span className="font-[500] text-[18px] text-[#262626]">{label}</span>
                 </div>

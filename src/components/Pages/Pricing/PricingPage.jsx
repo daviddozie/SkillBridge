@@ -4,6 +4,7 @@ import Button from "../../Button/Button"
 import PricingCard from "../../PricingCard/PricingCard"
 import Footer from "../../Footer/Footer"
 import { useState } from "react"
+import FAQ from "../../FAQ/FAQ"
 
 export default function PricingPage() {
 
@@ -16,7 +17,7 @@ export default function PricingPage() {
     const [yearPlan, setYearPlan] = useState("month")
 
     const isClicked = () => {
-        if(bgColor) {
+        if (bgColor) {
             setBg(bgColor);
             setBg2(empColor);
             setProPlan(79);
@@ -29,17 +30,17 @@ export default function PricingPage() {
     }
 
     const isClicked2 = () => {
-       if(empColor) {
+        if (empColor) {
             setBg2(bgColor);
             setBg(empColor);
             setProPlan(900);
             setYearPlan("year")
-       } 
-       else {
+        }
+        else {
             setBg2(empColor);
             setProPlan(79);
             setYearPlan("month")
-       }
+        }
     }
 
     const priceCards = [
@@ -116,6 +117,12 @@ export default function PricingPage() {
                     })}
                 </div>
             </div>
+            <FAQ
+                title='Frequently'
+                brTitle="Asked Questions"
+                subTitle='Still you have any questions? Contact our Team via support@skillbridge.com'
+                step="See All FAQ’s"
+            />
             <Footer
                 imgLogo="/images/header_Logo.jpg"
                 logoAlt="logo"

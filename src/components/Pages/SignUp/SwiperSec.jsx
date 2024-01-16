@@ -49,11 +49,12 @@ function SwiperSec({
 
     return (
         <div className="mt-[150px]">
-            <div className="mb-[70px]">
+            <div className="mb-[70px]" data-aos="fade-right" data-aos-duration="1000" data-aos-once="true">
                 <h4 className="text-[30px] font-[600] text-[#262626]">{title}</h4>
                 <p className="text-[14px] font-[400] text-[#59595A]">{subTitle}</p>
             </div>
             <Swiper
+                data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true"
                 className="swiper"
                 modules={[Navigation, Pagination, Scrollbar, A11y]}
                 spaceBetween={50}

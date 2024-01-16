@@ -24,7 +24,7 @@ function LoginSec({
     ]
 
     return (
-        <div className="bg-white rounded-[8px] p-[10px] md:p-[40px]">
+        <div className="bg-white rounded-[8px] p-[10px] md:p-[40px]" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
             <div>
                 <h1 className="text-[38px] font-[600] text-[#262626] text-center">{title}</h1>
                 <p className="text-[#4C4C4D] text-[14px] font-[400] text-center mb-9">{des}</p>

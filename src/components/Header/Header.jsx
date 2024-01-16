@@ -101,7 +101,7 @@ function Bars({ navs }) {
                 className='text-[30px] cursor-pointer lg:hidden'
                 onClick={handleToggle}
             />
-            <nav className={`navLinks duration-500 ease-in-out lg:static absolute bg-[#F7F7F8] min-h-[40vh] lg:min-h-[0vh] top-[28%] md:top-[16%]  z-[1000] left-0 w-full flex items-center px-5 shadow-lg transition-all ${isBarsClicked ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
+            <nav className={`navLinks duration-500 ease-in-out lg:static absolute bg-[#F7F7F8] min-h-[40vh] lg:min-h-[0vh] top-[28%] md:top-[16%]  z-[1000] overflow-hidden left-0 w-full flex items-center px-5 shadow-lg ${isBarsClicked ? 'opacity-100 visible' : 'opacity-0 invisible'}`}>
                 <ul className="flex lg:items-center gap-8 flex-col lg:flex-row">
                     {navs.map(nav => (
                         <li key={nav.id} className="cursor-pointer font-[400] text-[16px]">

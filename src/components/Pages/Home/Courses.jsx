@@ -111,7 +111,7 @@ function CoursesCard({
 
     return (
         <div>
-            <div className="bg-[#fff] border border-[#F1F1F3] rounded-[12px] p-[15px] md:p-[30px] course-card">
+            <div className="bg-[#fff] border border-[#F1F1F3] rounded-[12px] p-[15px] md:p-[30px] course-card" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
                 <div>
                     <div className="relative overflow-hidden rounded-[6px]">
                         <img src={image} alt={imageAlt} className="imgScale"/>

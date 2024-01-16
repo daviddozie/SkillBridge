@@ -10,7 +10,7 @@ function AboutRev({
 }) {
     return (
         <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto mb-[100px]">
-            <div className="bg-[#fff] rounded-[12px] p-[20px] md:p-[50px] relative">
+            <div className="bg-[#fff] rounded-[12px] p-[20px] md:p-[50px] relative" data-aos="fade-left" data-aos-duration="1000" data-aos-once="true">
                 <div className="flex flex-col md:flex-row md:justify-between md:items-center">
                     <div className="z-[20] mb-4">
                         <h2 className="font-[700] text-[35px] leading-[120%] pb-4"> <span className="text-[#FF9500]">{fTitle}</span>{Title}</h2>

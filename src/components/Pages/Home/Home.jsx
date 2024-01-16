@@ -39,8 +39,6 @@ export default function Home() {
                     brTitle="Asked Questions"
                     subTitle='Still you have any questions? Contact our Team via support@skillbridge.com'
                     step="See All FAQ’s"
-                    qest="Can I enroll in multiple courses at once?"
-                    ans="Absolutely! You can enroll in multiple courses simultaneously and access them at your convenience."
                 />
                 <Footer
                     imgLogo="/images/header_Logo.jpg"

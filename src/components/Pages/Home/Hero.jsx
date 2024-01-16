@@ -58,7 +58,7 @@ function Hero({
                         <span className="font-[600] noBreak text-[15px] md:text-[30px] lg:text-[38px]"><span className="text-[#FF9500]">{subHeroTitle}</span> {heroTitle}</span>
                     </div>
                 </div>
-                <div className="mt-5 md:mt-0">
+                <div className="mt-5 md:mt-0" data-aos="fade-up" data-aos-delay="75" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">
                     <p className="text-[28px] font-[500] text-[#262626] text-center mb-0 pt-4 pb-1">{heroNtitle}</p>
                     <p className="text-[16px] font-[400] text-[#262626] text-center">{heroText}</p>
                 </div>
