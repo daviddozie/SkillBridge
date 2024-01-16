@@ -1,4 +1,4 @@
-import Input from "../Contact/input";
+import Input from "../Contact/Input";
 import PasswordInput from "../../PasswordInput/PasswordInput";
 import Button from "../../Button/Button";
 import { Link } from "react-router-dom";
