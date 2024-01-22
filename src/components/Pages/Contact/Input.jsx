@@ -1,43 +1,39 @@
 import PropTypes from 'prop-types'
 
 function Input({
-    field
+    label,
+    labelFor,
+    inputType,
+    placeholder,
+    inputName,
+    onChange,
+    onBlur,
+    error,
 }) {
 
-    const {
-        labelFor,
-        label,
-        inputType,
-        inputName,
-        placeholder,
-    } = field
-
-    const gridClasses = {
-        "Subject": ["last--Item"],
-        "FirstName": ["grid--Item"],
-        "LastName": ["grid--Item"],
-        "Phone": ["grid--Item"],
-        "Email": ["grid--Item"]
-    }
-
-    const gridClass = gridClasses[inputName];
+    const borderColor = error ? 'border-[red] border-[2px]' : 'border';
 
     return (
-        <div className={`${gridClass}`}>
+        <div>
             <label htmlFor={labelFor} className="text-[14px] font-[500] text-[#262626] block mb-3">{label}</label>
-            <input typeof={inputType} name={inputName} placeholder={placeholder} className="bg-[#FCFCFD] w-full border border-[#F1F1F3] rounded-md p-5 text-[#656567] text-[14px] font-[400]" />
+            <input
+                type={inputType}
+                placeholder={placeholder}
+                name={inputName}
+                onChange={onChange}
+                onBlur={onBlur}
+                className={` bg-[#FCFCFD] w-full border  ${borderColor} border-[#F1F1F3] rounded-md p-5 text-[#656567] text-[14px] font-[400] inputs`}
+            />
         </div>
     )
 }
 
 Input.propTypes = {
-    field: PropTypes.exact({
-        labelFor: PropTypes.string.isRequired,
-        label: PropTypes.string.isRequired,
-        inputType: PropTypes.string.isRequired,
-        inputName: PropTypes.string.isRequired,
-        placeholder: PropTypes.string.isRequired,
-    })
+    labelFor: PropTypes.string.isRequired,
+    label: PropTypes.string.isRequired,
+    inputType: PropTypes.string.isRequired,
+    inputName: PropTypes.string.isRequired,
+    placeholder: PropTypes.string.isRequired,
 }
 
 export default Input

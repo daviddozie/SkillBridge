@@ -3,7 +3,7 @@ import Subheader from "../../Subheader/Subheader"
 import Button from "../../Button/Button"
 import PricingCard from "../../PricingCard/PricingCard"
 import Footer from "../../Footer/Footer"
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import FAQ from "../../FAQ/FAQ"
 
 export default function PricingPage() {
@@ -13,8 +13,20 @@ export default function PricingPage() {
 
     const [Bg, setBg] = useState(bgColor);
     const [Bg2, setBg2] = useState(empColor);
-    const [proPlan, setProPlan] = useState(79);
-    const [yearPlan, setYearPlan] = useState("month")
+    const [proPlan, setProPlan] = useState(1);
+    const [yearPlan, setYearPlan] = useState("month");
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (proPlan < 79) {
+                setProPlan((prevCount) => prevCount + 1);
+            } else {
+                clearInterval(interval);
+            }
+        }, 30);
+
+        return () => clearInterval(interval);
+    }, [proPlan]);
 
     const isClicked = () => {
         if (bgColor) {

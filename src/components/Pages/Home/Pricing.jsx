@@ -1,7 +1,7 @@
 import Title from "./SectionTitle";
 import Button from "../../Button/Button";
 import PricingCard from "../../PricingCard/PricingCard";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 export default function Pricing() {
 
@@ -10,11 +10,23 @@ export default function Pricing() {
 
     const [Bg, setBg] = useState(bgColor);
     const [Bg2, setBg2] = useState(empColor);
-    const [proPlan, setProPlan] = useState(79);
+    const [proPlan, setProPlan] = useState(1);
     const [yearPlan, setYearPlan] = useState("month")
 
+    useEffect(() => {
+        const interval = setInterval(() => {
+            if (proPlan < 79) {
+                setProPlan((prevCount) => prevCount + 1);
+            } else {
+                clearInterval(interval);
+            }
+        }, 50);
+
+        return () => clearInterval(interval);
+    }, [proPlan]);
+
     const isClicked = () => {
-        if(bgColor) {
+        if (bgColor) {
             setBg(bgColor);
             setBg2(empColor);
             setProPlan(79);
@@ -27,17 +39,17 @@ export default function Pricing() {
     }
 
     const isClicked2 = () => {
-       if(empColor) {
+        if (empColor) {
             setBg2(bgColor);
             setBg(empColor);
             setProPlan(900);
             setYearPlan("year")
-       } 
-       else {
+        }
+        else {
             setBg2(empColor);
             setProPlan(79);
             setYearPlan("month")
-       }
+        }
     }
 
 

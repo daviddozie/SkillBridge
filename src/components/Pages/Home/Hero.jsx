@@ -1,16 +1,17 @@
 import Button from "../../Button/Button"
 import PropTypes from 'prop-types'
 import { NavLink } from "react-router-dom"
+import { useTypewriter, Cursor } from "react-simple-typewriter"
 
 function Hero({
     spark,
     sparkAlt,
     flashIcon,
     flashIconAlt,
-    heroTitle,
     subHeroTitle,
     heroNtitle,
     heroText,
+    heroTitle,
     heroImg,
     heroAlt,
 }) {
@@ -46,6 +47,14 @@ function Hero({
         },
     ]
 
+    const {text} = useTypewriter({
+        words: ['developer', 'designers'],
+        loop: {},
+        typeSpeed: 120,
+        deleteSpeed: 80,
+    })
+
+    
     return (
         <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto flex justify-center mt-[100px]">
             <div className="w-[100%]">
@@ -55,7 +64,10 @@ function Hero({
                         <div className="bg-[#FFF4E5] p-3.5 rounded-[6px] me-4">
                             <img src={flashIcon} alt={flashIconAlt} />
                         </div>
-                        <span className="font-[600] noBreak text-[15px] md:text-[30px] lg:text-[38px]"><span className="text-[#FF9500]">{subHeroTitle}</span> {heroTitle}</span>
+                        <span className="font-[600] noBreak text-[15px] md:text-[30px] lg:text-[38px]">
+                            <span className="text-[#FF9500]">{subHeroTitle}</span> 
+                            <span className=""> {heroTitle}</span>
+                        </span>
                     </div>
                 </div>
                 <div className="mt-5 md:mt-0" data-aos="fade-up" data-aos-delay="75" data-aos-duration="500" data-aos-easing="ease-in-out" data-aos-once="true">

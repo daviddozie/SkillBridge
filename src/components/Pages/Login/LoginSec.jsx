@@ -1,8 +1,20 @@
 import Input from "../Contact/Input";
 import PasswordInput from "../../PasswordInput/PasswordInput";
 import Button from "../../Button/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import PropTypes, { objectOf, string } from 'prop-types';
+import { useState } from "react";
+
+const submitForm = async () => {
+    // Simulate an asynchronous form submission
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            // Assuming the form submission is successful after a delay
+            console.log("Form submitted successfully!");
+            resolve();
+        }, 3000); // Adjust the delay as needed
+    });
+};
 
 function LoginSec({
     title,
@@ -13,67 +25,175 @@ function LoginSec({
     log,
 }) {
 
-    const inputs = [
-        {
-            labelFor: "Email",
-            label: "Email",
-            inputType: "text",
-            inputName: "Email",
-            placeholder: "Enter Your Email Address",
-        },
-    ]
+    const navigate = useNavigate();
+    const [isLoading, setIsLoading] = useState(false);
+    const [errors, setErrors] = useState({});
+    const [formData, setFormData] = useState({
+        email: "",
+        password: "",
+    })
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+
+        const isValid = validateForm();
+
+        if (isValid) {
+            console.log("Form is valid. Submitting...");
+            setIsLoading(true);
+
+            try {
+                // Simulate an asynchronous form submission (you can replace this with your actual form submission logic)
+                await submitForm();
+                document.getElementById('form').reset();
+
+                navigate('/');
+
+                // After successful submission, you can redirect or perform any other action
+
+            } catch (error) {
+                console.error("Error submitting the form:", error);
+
+                // Handle error if needed
+            } finally {
+                // Hide loading spinner whether the submission was successful or not
+                setIsLoading(false);
+            }
+
+        } else {
+            console.log("Form is invalid. Please check for errors.");
+        }
+    };
+
+    const validateForm = () => {
+        const newErrors = {};
+
+        newErrors.email = emailValidation(formData.email);
+        newErrors.password = passwordValidation(formData.password);
+
+        setErrors(newErrors);
+
+        return Object.values(newErrors).every((error) => !error);
+    };
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevData) => ({
+            ...prevData,
+            [name]: value,
+        }));
+    };
+
+    const handleBlur = (e) => {
+        const { name } = e.target;
+
+        const newErrors = { ...errors };
+        switch (name) {
+            case "email":
+                newErrors.email = emailValidation(formData.email);
+                break;
+            case "password":
+                newErrors.password = passwordValidation(formData.password);
+                break;
+            default:
+                break;
+        }
+
+        setErrors(newErrors);
+    };
+
+    const emailValidation = (email) => {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        if (email === "") {
+            return "Please enter your email address!";
+        } else if (!emailRegex.test(email)) {
+            return "Please enter a valid email address!";
+        }
+        return "";
+    };
+
+    const passwordValidation = (password) => {
+        const pwdRegex = /^(?=.*[A-Z])(?=.*[@*+%$#&])(?=.*\d).{6,}$/;
+        if (password === "") {
+            return "Please enter your password";
+        }
+        else if (!pwdRegex.test(password)) {
+            return "Your password should have a minimum of 6 characters, 1 capital letter, 1 special character eg @*$#&+% and 1 number."
+        }
+        return "";
+    }
 
     return (
-        <div className="bg-white rounded-[8px] p-[10px] md:p-[40px]" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
-            <div>
-                <h1 className="text-[38px] font-[600] text-[#262626] text-center">{title}</h1>
-                <p className="text-[#4C4C4D] text-[14px] font-[400] text-center mb-9">{des}</p>
-                {inputs.map(input => {
-                    return (
-                        <div className="mb-6">
+        <>
+            <div className="bg-white rounded-[8px] p-[10px] md:p-[40px]" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
+                <form id="form" onSubmit={handleSubmit}>
+                    <div>
+                        <h1 className="text-[38px] font-[600] text-[#262626] text-center">{title}</h1>
+                        <p className="text-[#4C4C4D] text-[14px] font-[400] text-center mb-9">{des}</p>
+                        <div className="mb-4">
                             <Input
-                                key={input.label}
-                                field={input}
+                                labelFor="email"
+                                label="Email"
+                                inputType="text"
+                                inputName="email"
+                                placeholder="Enter Your email eddress"
+                                value={formData.email}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                error={errors.email}
                             />
+                            <span className='text-[12px] text-[red] font-[500]'>{errors.email}</span>
                         </div>
-                    )
-                })}
-                <PasswordInput
-                    labelFor="Password"
-                    label="Password"
-                    inputType="password"
-                    inputName="Password"
-                    placeholder="Enter Your Password"
-                />
-                <p className="text-end text-[#4C4C4D] text-[15px] font-[500] py-4">Forgot Password?</p>
-                <div className="flex items-center gap-3 py-4">
-                    <input type="checkbox" className="checkbox" />
-                    <span className="text-[15px] font-[500] text-[#59595A]">{terms}</span>
-                </div>
-                <Button
-                    label="Login"
-                    type="submit"
-                    styles="bg-[#FF9500] rounded-[10px] px-[20px] py-[18px] text-white text-[14px] font-[500] w-full"
-                />
-                <div className="flex items-center text-[#98989A] my-6 gap-3">
-                    <span className="border w-full"></span>
-                    {or}
-                    <span className="border w-full"></span>
-                </div>
-                <Button
-                    label="Sign Up With Google"
-                    type="submit"
-                    styles="bg-[#F7F7F8] border border-[#F1F1F3] rounded-[10px] px-[20px] py-[18px] text-black text-[14px] font-[500] w-full"
-                />
-                <div className="flex items-center justify-center gap-1 pt-6 text-[#262626]">
-                    <span>{bridge}</span>
-                    <Link to="/Sign Up" className="underline">{log}</Link>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                        <path d="M6.50005 19.5L19.5 6.49996M19.5 6.49996V18.98M19.5 6.49996H7.02005" stroke="#262626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                </div>
+                        <div>
+                            <PasswordInput
+                                labelFor="password"
+                                label="Password"
+                                inputType="password"
+                                inputName="password"
+                                placeholder="Enter your password"
+                                value={formData.password}
+                                onChange={handleChange}
+                                onBlur={handleBlur}
+                                error={errors.password}
+                            />
+                            <span className='text-[12px] text-[red] font-[500]'>{errors.password}</span>
+                        </div>
+                        <p className="text-end text-[#4C4C4D] text-[15px] font-[500] py-4">Forgot Password?</p>
+                        <div className="flex items-center gap-3 py-4">
+                            <input type="checkbox" className="checkbox" />
+                            <span className="text-[15px] font-[500] text-[#59595A]">{terms}</span>
+                        </div>
+                        <Button
+                            label="Login"
+                            type="submit"
+                            styles="bg-[#FF9500] rounded-[10px] px-[20px] py-[18px] text-white text-[14px] font-[500] w-full"
+                        />
+                        <div className="flex items-center text-[#98989A] my-6 gap-3">
+                            <span className="border w-full"></span>
+                            {or}
+                            <span className="border w-full"></span>
+                        </div>
+                        <Button
+                            label="Sign Up With Google"
+                            type="submit"
+                            styles="bg-[#F7F7F8] border border-[#F1F1F3] rounded-[10px] px-[20px] py-[18px] text-black text-[14px] font-[500] w-full"
+                        />
+                        <div className="flex items-center justify-center gap-1 pt-6 text-[#262626]">
+                            <span>{bridge}</span>
+                            <Link to="/Sign Up" className="underline">{log}</Link>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+                                <path d="M6.50005 19.5L19.5 6.49996M19.5 6.49996V18.98M19.5 6.49996H7.02005" stroke="#262626" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                            </svg>
+                        </div>
+                    </div>
+                </form>
             </div>
-        </div>
+            {isLoading && (
+                <div className="load">
+                    <div className="load-content"></div>
+                </div>
+            )}
+        </>
     )
 }
 

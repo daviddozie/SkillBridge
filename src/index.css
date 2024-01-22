@@ -40,8 +40,9 @@ body {
 }
 
 .last--Item {
-    grid-column: span 2;
-    grid-row: span 1;
+    grid-column: span 2 !important;
+    grid-row: span 1 !important;
+    width: 100%;
 }
 
 .item1 {
@@ -59,6 +60,64 @@ textarea {
 
 .line--mark {
     border-right: 3px !important;
+}
+
+.load {
+    display: block;
+    position: fixed;
+    z-index: 10000;
+    left: 0;
+    top: 0;
+    width: 100% !important;
+    height: 100% !important;
+    overflow: auto;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.load-content {
+    border: 10px solid #fff;
+    border-top: 10px solid #C4C4C4;
+    border-radius: 50%;
+    margin: 15% auto;
+    width: 100px;
+    height: 100px;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+        opacity: 100%;
+       
+    }
+
+    100% {
+        transform: rotate(360deg);
+        opacity: 100%;
+    }
+}
+
+.modal {
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    backdrop-filter: blur(2px);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 8% auto;
+    padding: 50px;
+    border-radius: 12px;
+    border: none;
+    width: 60%;
+    box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
 }
 
 .swiper {
@@ -127,6 +186,14 @@ textarea {
 
 .imgScale:hover {
     transform: scale(1.1) !important;
+}
+
+.errorMgs {
+    display: none;
+}
+
+.inputs:invalid ~ .errorMgs {
+    display: block;
 }
 
 @media only screen and (max-width: 1280px) {
@@ -296,15 +363,67 @@ textarea {
 
 @media only screen and (max-width: 600px) {
     .grid-wrapper {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 24px;
+        display: flex;
+       flex-direction: column;
     }
 
-    .grid--Item {
-        grid-column: span 2;
-        grid-row: span 1;
-    } 
+    .load {
+        display: block;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.7);
+    }
+    
+    .load-content {
+        border: 10px solid #fff;
+        border-top: 10px solid #C4C4C4;
+        border-radius: 50%;
+        margin: 70% auto;
+        width: 100px;
+        height: 100px;
+        animation: spin 1s linear infinite;
+    }
+    
+    @keyframes spin {
+        0% {
+            transform: rotate(0deg);
+            opacity: 100%;
+           
+        }
+    
+        100% {
+            transform: rotate(360deg);
+            opacity: 100%;
+        }
+    }
+    
+    .modal {
+        position: fixed;
+        z-index: 1000;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        backdrop-filter: blur(2px);
+        background-color: rgba(0, 0, 0, 0.5);
+    }
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: 50% auto;
+        padding: 20px;
+        border-radius: 12px;
+        border: none;
+        width: 90%;
+        box-shadow: 0px 0px 20px 5px rgba(0, 0, 0, 0.5);
+    }
 }
 
 @media only screen and (max-width: 540px) {
