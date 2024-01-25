@@ -11,6 +11,7 @@
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
     background: var(--White-97, #F7F7F8);
+    overflow-x: hidden;
 }
 
 .rote {

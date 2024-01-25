@@ -4,13 +4,11 @@ import Button from "../../Button/Button"
 import { useState } from "react"
 
 const submitForm = async () => {
-    // Simulate an asynchronous form submission
     return new Promise((resolve) => {
         setTimeout(() => {
-            // Assuming the form submission is successful after a delay
             console.log("Form submitted successfully!");
             resolve();
-        }, 3000); // Adjust the delay as needed
+        }, 3000);
     });
 };
 
@@ -38,19 +36,14 @@ export default function Form() {
             setIsLoading(true);
 
             try {
-                // Simulate an asynchronous form submission (you can replace this with your actual form submission logic)
                 await submitForm();
                 setShowModal(true);
                 document.getElementById('myForm').reset();
 
-                // After successful submission, you can redirect or perform any other action
-
             } catch (error) {
                 console.error("Error submitting the form:", error);
 
-                // Handle error if needed
             } finally {
-                // Hide loading spinner whether the submission was successful or not
                 setIsLoading(false);
                 window.addEventListener('click', () => {
                     setShowModal(false);

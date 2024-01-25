@@ -1,7 +1,6 @@
 import Button from "../../Button/Button"
 import PropTypes from 'prop-types'
 import { NavLink } from "react-router-dom"
-import { useTypewriter, Cursor } from "react-simple-typewriter"
 
 function Hero({
     spark,
@@ -46,14 +45,6 @@ function Hero({
             imageAlt: "netflixLogo"
         },
     ]
-
-    const {text} = useTypewriter({
-        words: ['developer', 'designers'],
-        loop: {},
-        typeSpeed: 120,
-        deleteSpeed: 80,
-    })
-
     
     return (
         <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto flex justify-center mt-[100px]">
