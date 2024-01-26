@@ -1,4 +1,5 @@
 import Accordion from "./Accordion";
+import PropTypes from "prop-types"
 
 function FAQ({
     title,
@@ -57,6 +58,13 @@ function FAQ({
             </div>
         </div>
     )
+}
+
+FAQ.propTypes = {
+    title: PropTypes.string.isRequired,
+    brTitle: PropTypes.string.isRequired,
+    subTitle: PropTypes.string.isRequired,
+    step: PropTypes.string.isRequired,
 }
 
 export default FAQ;

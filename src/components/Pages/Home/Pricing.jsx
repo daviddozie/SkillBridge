@@ -89,7 +89,7 @@ export default function Pricing() {
     ];
 
     return (
-        <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto">
+        <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto overflow-hidden">
             <div className="flex flex-col lg:flex-row lg:items-center">
                 <Title
                     title="Our Pricing"

@@ -60,8 +60,8 @@ function SwiperSec({
                 slidesPerView={1}
                 navigation={{ nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' }}
                 loop={{ swiper: true }}
-                onSwiper={(swiper) => console.log(swiper)}
-                onSlideChange={() => console.log('slide change')}
+                // onSwiper={(swiper) => console.log(swiper)}
+                // onSlideChange={() => console.log('slide change')}
             >
                 {testimonies.map(testimony => {
                     return (

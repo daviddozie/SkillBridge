@@ -45,7 +45,7 @@ function Hero({
             imageAlt: "netflixLogo"
         },
     ]
-    
+
     return (
         <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto flex justify-center mt-[100px]">
             <div className="w-[100%]">
@@ -56,7 +56,7 @@ function Hero({
                             <img src={flashIcon} alt={flashIconAlt} />
                         </div>
                         <span className="font-[600] noBreak text-[15px] md:text-[30px] lg:text-[38px]">
-                            <span className="text-[#FF9500]">{subHeroTitle}</span> 
+                            <span className="text-[#FF9500]">{subHeroTitle}</span>
                             <span className=""> {heroTitle}</span>
                         </span>
                     </div>
@@ -81,10 +81,12 @@ function Hero({
                         />
                     </NavLink>
                 </div>
-                <div className="border border-[#F1F1F3] bg-[#FCFCFD] rounded-[12px] flex justify-center gap-[60px] items-center px-[30px] py-[50px] my-[90px] flex-wrap">
+                <div className="border border-[#F1F1F3] bg-[#FCFCFD] rounded-[12px] flex justify-center gap-[60px] items-center px-[30px] py-[50px] my-[90px] flex-wrap  brand">
                     {brands.map(brand => {
                         return (
+
                             <img src={brand.image} alt={brand.imageAlt} key={brand.imageAlt} />
+
                         )
                     })}
                 </div>

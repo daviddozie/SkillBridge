@@ -1,6 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlus, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { useState } from 'react';
+import PropTypes from 'prop-types'
 
 function Accordion({
     qest,
@@ -32,6 +33,11 @@ function Accordion({
             </div>
         </div>
     )
+}
+
+Accordion.propTypes = {
+    qest: PropTypes.string.isRequired,
+    ans: PropTypes.string.isRequired,
 }
 
 export default Accordion;

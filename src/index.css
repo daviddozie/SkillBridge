@@ -11,7 +11,7 @@
 body {
     font-family: 'Be Vietnam Pro', sans-serif;
     background: var(--White-97, #F7F7F8);
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 
 .rote {
@@ -196,6 +196,8 @@ textarea {
 .inputs:invalid ~ .errorMgs {
     display: block;
 }
+
+
 
 @media only screen and (max-width: 1280px) {
     .swiper {

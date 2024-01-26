@@ -40,7 +40,7 @@ function Benefit() {
     ]
 
     return (
-        <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto mt-[50px]">
+        <div className="w-[95%] md:w-[90%] lg:w-[80%] mx-auto mt-[50px] overflow-hidden">
             <div className='flex flex-col lg:flex-row lg:items-center'>
                 <Title
                     title="Benefits"
