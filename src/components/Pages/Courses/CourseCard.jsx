@@ -33,7 +33,7 @@ function CourseCard({
                     <div className="grid grid-cols-3 gap-[10px] md:gap-[30px] relative overflow-hidden rounded-[6px]">
                         {courseImages.map(courseImage => {
                             return (
-                                <img key={courseImage} src={courseImage} className="rounded-[6px] imgScale" />
+                                <img key={courseImage} src={courseImage} className="rounded-[6px] imgScale" aria-label="lazy" decoding="async"/>
                             )
                         })}
                     </div>

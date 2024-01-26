@@ -75,7 +75,7 @@ function TestmonialCard({
             </div>
             <div className="border border-[#F1F1F3] bg-[#FCFCFD] p-[15px] lg:p-[30px] rounded-bl-[8px] rounded-br-[8px] flex justify-between items-end">
                 <div className="flex items-center gap-3">
-                    <img src={profile} alt={profileAlt} />
+                    <img src={profile} alt={profileAlt} aria-label="lazy" decoding="async"/>
                     <span className="font-[600] text-[15px] text-[#333]">{profileName}</span>
                 </div>
                 <Button

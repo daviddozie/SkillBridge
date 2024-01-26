@@ -114,7 +114,7 @@ function CoursesCard({
             <div className="bg-[#fff] border border-[#F1F1F3] rounded-[12px] p-[15px] md:p-[30px] course-card overflow-hidden" data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
                 <div>
                     <div className="relative overflow-hidden rounded-[6px]">
-                        <img src={image} alt={imageAlt} className="imgScale"/>
+                        <img src={image} alt={imageAlt} className="imgScale" aria-label="lazy" decoding="async"/>
                     </div>
                     <div className="flex flex-col md:flex-row md:justify-between py-[30px]">
                         <div className="flex items-center gap-3">

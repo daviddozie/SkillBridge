@@ -85,13 +85,13 @@ function Hero({
                     {brands.map(brand => {
                         return (
 
-                            <img src={brand.image} alt={brand.imageAlt} key={brand.imageAlt} />
+                            <img src={brand.image} alt={brand.imageAlt} key={brand.imageAlt} aria-label="lazy" decoding="async"/>
 
                         )
                     })}
                 </div>
                 <div>
-                    <img src={heroImg} alt={heroAlt} />
+                    <img src={heroImg} alt={heroAlt} aria-label="lazy" decoding="async"/>
                 </div>
             </div>
         </div>

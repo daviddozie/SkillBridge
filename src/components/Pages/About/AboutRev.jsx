@@ -26,7 +26,7 @@ function AboutRev({
                         </NavLink>
                     </div>
                 </div>
-                <img src={shape} className="w-[25%] absolute top-0 right-[200px] z-[1] hidden lg:block" />
+                <img src={shape} className="w-[25%] absolute top-0 right-[200px] z-[1] hidden lg:block" aria-label="lazy" decoding="async"/>
             </div>
         </div>
     )

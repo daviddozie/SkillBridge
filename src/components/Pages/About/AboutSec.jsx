@@ -16,7 +16,7 @@ function AboutSec({
                             <div className="bg-white rounded-[12px] md:p-[40px] p-[20px] benefit-card" key={card.cardTitle} data-aos="zoom-in" data-aos-duration="1000" data-aos-once="true">
                                 <div>
                                     <div className="mb-5 flex justify-center items-center w-[60px] bg-[#FFF9F0] h-[60px] border border-[#FFEACC] rounded-[8px]">
-                                        <img src={card.Icon} />
+                                        <img src={card.Icon} aria-label='lazy' decoding='async'/>
                                     </div>
                                     <h4 className="text-[20px] text-[#262626] font-[600] mb-2">{card.cardTitle}</h4>
                                     <p className="text-[#59595A] font-[400] text-[15px]">{card.cardDescription}</p>
