@@ -11,7 +11,7 @@ export default function Home() {
 
     return (
         <>
-            <div>
+            <div className="overflow-hidden">
                 <Header
                     headerText="Free Courses 🌟 Sale Ends"
                     headerLogo="/images/header_Logo.jpg"
